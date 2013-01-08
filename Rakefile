@@ -13,4 +13,5 @@ task :build do
   Dir.mkdir('lib') unless File.exist? 'lib'
   IO.write('lib/contemporary_words.rb', ruby_code.result(binding))
 
+  sh %{ gem build contemporary_words.gemspec }
 end
