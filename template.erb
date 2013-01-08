@@ -1,0 +1,17 @@
+module ContemporaryWords
+
+  class << self
+
+    def all
+      [
+<%=
+        sorted_words.map do |word|
+          "        '#{word}',"
+        end.join("\n")
+%>
+      ]
+    end
+
+  end
+
+end
